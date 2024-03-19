@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color:beige;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'lora', serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'candal',serif;
+    color: black;
+    margin: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color:purple;
+    height: 64px;
+}
+
+header * {
+    color: white;
+
+}
+header .logo {
+    float: left ;
+    height: inherit;
+    margin-left: 2em;
+}
+
+header .text {
+    margin: 9px;
+    font-family:'candal', serif;
+}
+header .text span {
+    color:#3bafdd;
+}
+
+header  ul {
+    float:right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+}
+
+header  ul li {
+    float: left;
+    position: relative;
+
+}
+
+header  ul li ul {
+    position: absolute;
+    top: 64px;
+    right: 0px;
+    width: 180px;
+    display: none;
+    z-index: 88888;
+}
+
+header  ul li:hover ul{
+    display: block;
+}
+header  ul li ul li {
+    width: 100%;
+}
+
+header  ul li ul li a {
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
+
+header  ul li ul li a.Logout {
+    color: red;
+}
+
+header  ul li ul li a:hover{
+    background-color:#999494 ;
+}
+
+header  ul li a{
+    display: block;
+    padding: 21px;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+header  ul li a:hover{
+    background-color:#de4fd4bd ;
+    transition: 0.5s;
+}
+
+
+header .menu-toggles {
+    display: none;
+}
+.page-wrapper a:hover{
+    color: purple;
+}
+
+
+.post-sliders {
+    position: relative;
+}
+.post-sliders .slider-title {
+    text-align: center;
+    margin: 30px auto; 
+
+}
+
+.post-sliders .next {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    cursor: pointer;
+}
+
+.post-sliders .prev {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    cursor: pointer;
+}
+.post-sliders .post-wrapper {
+    width: 84%;
+    height: 350px;
+    margin: 0px auto;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px ;
+}
+.post-sliders .post-wrapper .post {
+    height: 330px;
+    width: 300px;
+    margin: 0px 10px;
+    display: inline-block; 
+    background-color: white;
+    border-radius: 5px;
+
+}
+
+.post-sliders .post-wrapper .post .post-info{
+    height: 130px;
+    padding: 0px 10px 5px;
+
+}
+
+.post-sliders .post-wrapper .post .slider-image{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.content {
+    width: 90%;
+    margin: 30px auto 30px;
+}
+
+.content .main-content{
+    width: 90%;
+    float: left;
+}
+
+.content .main-content.single{
+    background-color: white;
+    padding: 20px 50px;
+    font-size: 1.1em; 
+}
+.content .main-content.single .post-title{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.content .main-content .post{
+    width: 95%;
+    height: 270px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background-color: white;
+    position: relative;
+}
+
+.content .main-content .post .read-more{
+    position: absolute;
+    bottom: 20px;
+    height: 30px;
+    border: 1px solid #a212a2;
+    background-color: transparent;
+    border-radius: 0px;
+    color: #a212a2 !important;
+
+}
+
+.content .main-content .post .read-more:hover{
+    background-color: #800080;
+    color: white !important;
+    transition: .25s;
+}
+
+.content .main-content .post .post-image{
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+.content .main-content .post .post-prev{
+    padding: 10px;
+    width: 60%;
+    float: right;
+}
+
+.content .main-content .title{
+
+    margin: 30px;
+}
+.btn {
+    padding: .5rem 1rem;
+    background-color: #a212a2;
+    color: white;
+    border: 1px transparent;
+    border-radius: .25rem
+    ;
+}
+
+.btn:hover{
+    color: white !important;
+    background-color:#de4fd4bd ;
+}
+.flix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+@media only screen and (max-width: 750px){ 
+    header {
+        position: relative;
+    }
+    header  ul {
+        width: 100%;
+        background-color:#a212a2 ;
+        max-height: 0px;
+        overflow: hidden;
+    
+    }
+    .showing { 
+        max-height: 100em;
+    }
+
+    header  ul li{
+        width: 100%;
+    }
+    header  ul li ul {
+        position: static;
+        width: 100%;
+        display: block ;
+        
+    }
+
+    header  ul li ul li a:hover{
+        background-color: #de4fd4bd ;
+    }
+    header  ul li ul li a {
+        padding: 10px;
+        background-color:#a212a2 ;
+        color: white;
+        padding: 50px;
+
+    }
+    
+    header  ul li ul li a.Logout {
+        color: red;
+    }
+
+    header .menu-toggles {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 1.9em;
+    }
+
+    header .logo {
+        margin-left: .5em;
+    }
+    
+    
+
+
+}
